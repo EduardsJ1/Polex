@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 function Navbar(){
     return(
         <div className="navbar">
-            <img src={logo} alt="Logo" className="logo" />
+            <div className="logo-container">
+                <img src={logo} alt="Logo" className="logo" />
+            </div>
             <div className="navbar-links">
                 <Link to="/" className="navbar-link">Sākumplapa</Link>
                 <Link to="/par-mums" className="navbar-link">Par mums</Link>

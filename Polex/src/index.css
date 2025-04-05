@@ -1,68 +1,101 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+@font-face {
+  font-family: 'Outfit';
+  src: local('Outfit'), url('./fonts/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@font-face {
+  font-family: 'Open Sans';
+  src: local('Open Sans'), url('./fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-body {
+:root{
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  --primary-color: #FFFFFF;
+  --secondary-color: #000000;
+  --accent-color: #5f5f5f;
+  --main-background-color: #1A1A1A;
+}
+
+body{
+  margin: 0;
+  background-color: var(--main-background-color);
+  color: var(--primary-color);
+}
+
+.logo-container {
+  width: 140px;
+  height: 140px;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.logo{
+  width: 100%;
+  height: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  font-family: 'Outfit', sans-serif;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.navbar-links{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.navbar-links a{
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-family: 'Outfit', sans-serif;	
+}
+
+.page{
+  margin: 0 10%;
+}
+
+.page h1{
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.home-title-container h1{
+  font-size: 4rem;
+}
+
+.home-title-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page h2{
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.page h3{
+  font-family: 'Open-Sans', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+  text-align: center;
 }
