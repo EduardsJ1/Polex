@@ -1,5 +1,5 @@
 import React from 'react';
-import Sound_mute_icon from '../assets/icons/Sound_mute.svg ';
+import { ReactComponent as SoundMuteIcon } from '../assets/icons/Sound_mute.svg';
 function Home() {
   return (
     <div className="page">
@@ -17,7 +17,7 @@ function Home() {
 
                 <div className='icon-container'>
                     <div className='icon'>
-                        
+                        <SoundMuteIcon className='icon-svg' />
                     </div>
                     <div className='icon-text'>
                         <h2>Skaņas izolācija</h2>
@@ -26,7 +26,7 @@ function Home() {
                 </div>
 
                 <div className='icon-container'>
-                    <div className='icon'></div>
+                    <div className='icon'><SoundMuteIcon className='icon-svg' /></div>
                     <div className='icon-text'>
                         <h2>Ūdensizsturīgs</h2>
                         <p>Poliuretāna putas ir ūdensizturīgas un novērš mitruma iekļūšanu ēkā, kas pasargā no pelējuma veidošanās</p>
@@ -34,7 +34,7 @@ function Home() {
                 </div>
 
                 <div className='icon-container'>
-                    <div className='icon'></div>
+                    <div className='icon'><SoundMuteIcon className='icon-svg' /></div>
                     <div className='icon-text'>
                         <h2>Ilgmūžība</h2>
                         <p>Poliuretāna putas ir izturīgas un saglabā savas siltumizolācijas īpašības daudzus gadus</p>
@@ -42,7 +42,7 @@ function Home() {
                 </div>
 
                 <div className='icon-container'>
-                    <div className='icon'></div>
+                    <div className='icon'><SoundMuteIcon className='icon-svg' /></div>
                     <div className='icon-text'>
                         <h2>Kompakta izolācija</h2>
                         <p>Poliuretāna putas nodrošina lielisku siltumizolāciju pat plānā kārtā un ir piemērots arī šaurās vietās</p>
@@ -50,7 +50,7 @@ function Home() {
                 </div>
 
                 <div className='icon-container'>
-                    <div className='icon'></div>
+                    <div className='icon'><SoundMuteIcon className='icon-svg' /></div>
                     <div className='icon-text'>
                         <h2>Piemērots dažādām virsmām</h2>
                         <p>Poliuretāna putas labi pieķeras pie dažādām virsmām, tostarp kokam, metālam un betonam</p>
@@ -58,7 +58,7 @@ function Home() {
                 </div>
 
                 <div className='icon-container'>
-                    <div className='icon'></div>
+                    <div className='icon'><SoundMuteIcon className='icon-svg' /></div>
                     <div className='icon-text'>
                         <h2>Struktūras izturība</h2>
                         <p>Slēgto šūnu poliuretāna putas stiprina struktūru, uzlabojot ēkas stabilitāti un izturību pret laikapstākļiem</p>
