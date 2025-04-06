@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Sound_mute_icon from '../assets/icons/Sound_mute.svg ';
 function Home() {
   return (
     <div className="page">
@@ -16,7 +16,9 @@ function Home() {
             <div className='icon-main-container'>
 
                 <div className='icon-container'>
-                    <div className='icon'></div>
+                    <div className='icon'>
+                        
+                    </div>
                     <div className='icon-text'>
                         <h2>Skaņas izolācija</h2>
                         <p>Poliuretāna putas palīdz ar skaņas izolāciju un absorbē skaņu samazinot trokšņus starp telpām vai ārpuses</p>
