@@ -1,6 +1,10 @@
 import React from 'react';
-import { ReactComponent as SoundMuteIcon } from '../assets/icons/Sound_mute.svg';
+import { ReactComponent as SoundMuteIcon } from '../assets/icons/sound_figma_test.svg';
+import { ReactComponent as Icon } from '../assets/icons/Sound_mute.svg';
+import { ReactComponent as SoundIcon } from '../components/icons/soundIcon.jsx';
 function Home() {
+    const viewBox = "-2 -2 24 24";
+
   return (
     <div className="page">
         <div className="home-title-container">
@@ -17,7 +21,7 @@ function Home() {
 
                 <div className='icon-container'>
                     <div className='icon'>
-                        <SoundMuteIcon className='icon-svg' />
+                        <SoundIcon/>
                     </div>
                     <div className='icon-text'>
                         <h2>Skaņas izolācija</h2>
@@ -26,7 +30,7 @@ function Home() {
                 </div>
 
                 <div className='icon-container'>
-                    <div className='icon'><SoundMuteIcon className='icon-svg' /></div>
+                    <div className='icon'><SoundMuteIcon className='icon-svg' width="" height="" shape-rendering="geometricPrecision" viewBox={viewBox}/></div>
                     <div className='icon-text'>
                         <h2>Ūdensizsturīgs</h2>
                         <p>Poliuretāna putas ir ūdensizturīgas un novērš mitruma iekļūšanu ēkā, kas pasargā no pelējuma veidošanās</p>
@@ -34,7 +38,7 @@ function Home() {
                 </div>
 
                 <div className='icon-container'>
-                    <div className='icon'><SoundMuteIcon className='icon-svg' /></div>
+                    <div className='icon'><SoundMuteIcon className='icon-svg' width="" height="" shape-rendering="geometricPrecision" viewBox={viewBox}/></div>
                     <div className='icon-text'>
                         <h2>Ilgmūžība</h2>
                         <p>Poliuretāna putas ir izturīgas un saglabā savas siltumizolācijas īpašības daudzus gadus</p>
@@ -58,7 +62,7 @@ function Home() {
                 </div>
 
                 <div className='icon-container'>
-                    <div className='icon'><SoundMuteIcon className='icon-svg' /></div>
+                    <div className='icon'><SoundMuteIcon className='icon-svg' width="" height="" shape-rendering="geometricPrecision" viewBox={viewBox}/></div>
                     <div className='icon-text'>
                         <h2>Struktūras izturība</h2>
                         <p>Slēgto šūnu poliuretāna putas stiprina struktūru, uzlabojot ēkas stabilitāti un izturību pret laikapstākļiem</p>
