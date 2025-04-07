@@ -54,11 +54,12 @@ const soundIconSvg = (props) => (
       </motion.g>
       <motion.g 
         id="bar"
-        animate={{ x: [0,2,0] }}
+        animate={{ scale: [1, 0, 1] }}
         transition={{
             times:[0, 0.5, 1],
-            duration: 2,
+            duration: 1,
             repeat: Infinity,
+            repeatDelay: 3,
             type: "keyframes",
             ease: "easeInOut",
         }}
