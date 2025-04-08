@@ -118,8 +118,12 @@ body{
 
 .icon-container .icon{
   width: 100px;
-  height: auto;
+  height: 100px;
   margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
   background-color: var(--primary-color);
   border-radius: 15px;
   flex-shrink: 0;
@@ -174,22 +178,4 @@ body{
     flex-basis: calc(45% - 1rem);
   }
 
-}
-
-#Frame_1 {
-	transform-box: fill-box;
-	transform-origin: 50% 50%
-}
-#Rectangle_2 {
-	animation: 1.5s linear 0s 1 normal forwards running Rectangle_2;
-	transform-box: fill-box;
-	transform-origin: 50% 50%
-}
-@keyframes Rectangle_2 {
-	0% {
-		height: 0.1px;
-	}
-	100% {
-		height: 23px;
-	}
 }
