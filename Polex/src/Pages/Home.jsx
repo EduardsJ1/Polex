@@ -8,10 +8,13 @@ import { ReactComponent as CompactIcon } from '../components/icons/compactIcon.j
 import { ReactComponent as ShieldIcon } from '../components/icons/shieldIcon.jsx';
 import { ReactComponent as StickyIcon } from '../components/icons/stickyIcon.jsx';
 import HeatInsulation from './home_components/HeatInsulation.jsx';
+import Service from './home_components/Service.jsx';
+import Footer from '../components/Footer.jsx';
 function Home() {
     const viewBox = "-2 -2 24 24";
 
   return (
+    <>
     <div className="page">
         <div className="home-title-container">
             <h1>SIA POLEX</h1>
@@ -78,9 +81,16 @@ function Home() {
                 </div>
             </div>
         </div>
-        <HeatInsulation />
     </div>
-
+    <HeatInsulation />
+    <div className="section-divider">
+        <div className='section-background'>
+            <Service/>
+        </div>
+    </div>
+    <div className='contact-container'></div>
+    <Footer/>
+    </>
   );
 }
 

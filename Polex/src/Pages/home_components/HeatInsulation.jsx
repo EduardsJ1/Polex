@@ -2,9 +2,9 @@ import React from 'react';
 import videoTest from '../../assets/videoTest.mp4';
 function HeatInsulation(){
     return (
-        <div>
+        <div className='heat-main-container'>
             <h1>Efektīva siltumizolācija</h1>
-            <div>
+            <div className='heat-container'>
                 <div className="heat-text-container">
                     <h2>Poliuretāna putas nodrošina augstu temperatūras izolāciju,
                         kas palīdz saglabāt ēku siltu ziemā un vēsu vasarā</h2>
