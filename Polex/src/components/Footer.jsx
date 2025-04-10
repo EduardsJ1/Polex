@@ -1,4 +1,5 @@
 import logo from '../assets/logo.webp';
+import { Link } from 'react-router-dom';
 function Footer(){
     return(
         <footer>
@@ -12,8 +13,9 @@ function Footer(){
                 <div className='footer-info'>
                     <div className='footer-links'>
                         <h2>Navigācija</h2>
-                        <a href="/">Sākumlapā</a>
-                        <a href="/par-mums">Par mums</a>
+                        <Link to="/" className="navbar-link">Sākumplapa</Link>
+                        <Link to="/par-mums" className="navbar-link">Par mums</Link>
+                        <Link to="/Kontakti" className="navbar-link">Kontakti</Link>
                     </div>
                     <div className='footer-contact'>
                         <h2>Kontakti</h2>
