@@ -332,6 +332,16 @@ h3{
   .service-information{
     grid-template-columns: repeat(1, 1fr);
   }
+  .footer-content h2{
+    font-size: 16px;
+    margin: 10px;
+  }
+  .footer-content{
+    font-size: 10px;
+  }
+  .footer-logo-info{
+    width: 100px;
+  }
 }
 
 .service-information .icon-containter .icon{
@@ -359,8 +369,8 @@ footer{
 }
 .footer-content{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+  align-items: top;
   padding: 0;
   max-width: 1200px;
   margin: auto;
@@ -371,13 +381,28 @@ footer{
   text-align: center;
   gap: 1rem;
 }
+.footer-logo-info{
+  max-width: 200px;
+}
+.footer-logo{
+  width: 100%;
+}
 .footer-logo-info .footer-logo img{
-  width: 200px;
+  width: 100%;
   margin: auto;
 }
 .footer-logo-info p{
   text-align: center;
 }
+.footer-info h2{
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.footer-info{
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
 .footer-contact-container div{
   display: flex;
   justify-content: space-between;
