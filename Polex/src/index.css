@@ -343,6 +343,28 @@ h3{
     width: 100px;
   }
 }
+/* main icon mobile fix */
+@media (max-width: 580px){
+  .icon-text h2{
+    font-size: 1.4rem;
+  }
+  .icon-text p{
+    font-size: 14px !important;
+  }
+  .icon-container .icon{
+    width: 80px;
+    height: 80px;
+  }
+  .icon-container .icon svg{
+    width: 70px;
+    height: 70px;
+  }
+  .icon-container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+}
 
 .service-information .icon-containter .icon{
   width: 150px;
