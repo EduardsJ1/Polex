@@ -1,20 +1,43 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Gallery.css';
-
+import test1 from '../assets/gallery-images/test1.webp';
+import test2 from '../assets/gallery-images/test2.webp';
+import test3 from '../assets/gallery-images/test3.webp';
+import test4 from '../assets/gallery-images/test4.webp';
+import test5 from '../assets/gallery-images/test5.webp';
 const images = [
-  '/src/assets/gallery-images/test1.webp',
-  '/src/assets/gallery-images/test2.webp',
-  '/src/assets/gallery-images/test3.webp',
-  '/src/assets/gallery-images/test4.webp',
-  '/src/assets/gallery-images/test5.webp',
+    test1,
+    test2,
+    test3,
+    test4,
+    test5,
 ];
 
 const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const intervalRef = useRef(null);
 
-  // Auto-rotate images every 5 seconds, unless hovering
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+
+    checkIfMobile();
+
+
+    window.addEventListener('resize', checkIfMobile);
+
+
+    return () => {
+      window.removeEventListener('resize', checkIfMobile);
+    };
+  }, []);
+
+
   useEffect(() => {
     const startInterval = () => {
       intervalRef.current = setInterval(() => {
@@ -41,13 +64,15 @@ const Gallery = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
 
-  // Function to get visible images with correct indexes
+
   const getVisibleImages = () => {
     const totalImages = images.length;
     const visibleImages = [];
     
-    // Calculate the 5 visible images with the current index in the middle
-    for (let i = -2; i <= 2; i++) {
+
+    const range = isMobile ? 1 : 2;
+    
+    for (let i = -range; i <= range; i++) {
       let indexToShow = currentIndex + i;
       
       // Handle wrapping around the array
