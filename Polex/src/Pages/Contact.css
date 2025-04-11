@@ -1,5 +1,6 @@
 .contact-page h1{
     text-align: center;
+    padding: 0 1rem;
 }
 .contact-page .contact-page-container{
     display: flex;
