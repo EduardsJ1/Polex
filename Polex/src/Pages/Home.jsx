@@ -9,6 +9,7 @@ import { ReactComponent as ShieldIcon } from '../components/icons/shieldIcon.jsx
 import { ReactComponent as StickyIcon } from '../components/icons/stickyIcon.jsx';
 import HeatInsulation from './home_components/HeatInsulation.jsx';
 import Service from './home_components/Service.jsx';
+import ContactForm  from './Contact_form.jsx';
 import Footer from '../components/Footer.jsx';
 function Home() {
     const viewBox = "-2 -2 24 24";
@@ -88,7 +89,12 @@ function Home() {
             <Service/>
         </div>
     </div>
-    <div className='contact-container'></div>
+    <div className='contact-container'>
+        <h2>Sazinaties ar mums!</h2>
+        <div className='contact-form-container'>
+            <ContactForm/>
+        </div>
+    </div>
     <Footer/>
     </>
   );

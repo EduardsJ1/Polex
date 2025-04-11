@@ -383,7 +383,8 @@ h3{
 
 
 .contact-container{
-  height: 300px;
+  margin-top: 150px;
+  min-height: 300px;
 }
 
 
