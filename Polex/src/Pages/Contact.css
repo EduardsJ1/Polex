@@ -1,0 +1,32 @@
+.contact-page h1{
+    text-align: center;
+}
+.contact-page .contact-page-container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    padding: 1rem;
+}
+
+.contact-page .contact-page-container .email-form-container{
+    width: 40%;
+    min-width: 300px;
+}
+
+.contact-page .contact-page-container .contact-info .phone-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.contact-page .contact-page-container .contact-info .email-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
