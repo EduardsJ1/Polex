@@ -1,5 +1,5 @@
 import * as React from "react"
-const SvgComponent = (props) => (
+const ShieldIcon = (props) => (
   <svg
     // width={24}
     // height={28}
@@ -27,4 +27,4 @@ const SvgComponent = (props) => (
     </g>
   </svg>
 )
-export { SvgComponent as ReactComponent }
+export { ShieldIcon as ReactComponent }

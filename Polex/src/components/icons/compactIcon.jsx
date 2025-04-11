@@ -1,8 +1,6 @@
 import * as React from "react"
-const SvgComponent = (props) => (
+const CompactIcon = (props) => (
   <svg
-    // width={36}
-    // height={36}
     viewBox="0 0 36 36"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -37,4 +35,4 @@ const SvgComponent = (props) => (
     </g>
   </svg>
 )
-export { SvgComponent as ReactComponent }
+export { CompactIcon as ReactComponent }

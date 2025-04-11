@@ -1,5 +1,5 @@
 import * as React from "react"
-const SvgComponent = (props) => (
+const OtherIcon = (props) => (
   <svg
     viewBox="0 0 22 22"
     fill="none"
@@ -20,4 +20,4 @@ const SvgComponent = (props) => (
     </g>
   </svg>
 )
-export { SvgComponent as ReactComponent }
+export { OtherIcon as ReactComponent }

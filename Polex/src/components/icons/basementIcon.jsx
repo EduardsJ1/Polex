@@ -1,5 +1,5 @@
 import * as React from "react"
-const SvgComponent = (props) => (
+const BasementIcon = (props) => (
   <svg
     viewBox="0 0 40 29"
     fill="none"
@@ -26,4 +26,4 @@ const SvgComponent = (props) => (
     </g>
   </svg>
 )
-export { SvgComponent as ReactComponent }
+export { BasementIcon as ReactComponent }

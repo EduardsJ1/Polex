@@ -1,5 +1,5 @@
 import * as React from "react"
-const SvgComponent = (props) => (
+const FoundationIcon = (props) => (
   <svg
     viewBox="0 0 36 33"
     fill="none"
@@ -45,4 +45,4 @@ const SvgComponent = (props) => (
     </g>
   </svg>
 )
-export { SvgComponent as ReactComponent }
+export { FoundationIcon as ReactComponent }

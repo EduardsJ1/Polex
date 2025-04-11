@@ -1,5 +1,5 @@
 import * as React from "react"
-const SvgComponent = (props) => (
+const StickyIcon = (props) => (
   <svg
     // width={38}
     // height={28}
@@ -47,4 +47,4 @@ const SvgComponent = (props) => (
     </g>
   </svg>
 )
-export { SvgComponent as ReactComponent }
+export { StickyIcon as ReactComponent }
