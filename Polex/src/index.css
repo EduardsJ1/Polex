@@ -367,7 +367,11 @@ h3{
 }
 
 .service-information .icon-containter .icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 150px;
+  height: 150px;
   margin: auto;
 }
 
