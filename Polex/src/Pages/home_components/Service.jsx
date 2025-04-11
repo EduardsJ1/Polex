@@ -7,11 +7,13 @@ import { ReactComponent as BasementIcon } from '../../components/icons/basementI
 import { ReactComponent as OuterWallIcon } from '../../components/icons/outerwallIcon.jsx';
 import { ReactComponent as InnerWallIcon } from '../../components/icons/innerwallIcon.jsx';
 import { ReactComponent as OtherIcon } from '../../components/icons/otherIcon.jsx';
+import Gallery from '../../components/Gallery.jsx';
 function Service(){
     return(
         <div className="service-section">
         <h1>Pakalpojumi</h1>
         <p>POLEX piedāvā profesionālus mājas siltināšanas pakalpojumus, nodrošinot efektīvu siltumizolāciju ar poliuretāna putām</p>
+        <Gallery/>
         <div className='service-icon-container'>
             <div className="title"><h2>Pakalpojumi var iekļaut</h2></div>
             <div className='service-information'>
