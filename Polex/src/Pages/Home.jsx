@@ -89,7 +89,7 @@ function Home() {
             <Service/>
         </div>
     </div>
-    <div className='contact-container'>
+    <div className='contact-main-container'>
         <h2>Sazinaties ar mums!</h2>
         <div className='contact-form-container'>
             <ContactForm/>
