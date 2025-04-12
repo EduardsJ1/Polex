@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import logo from '../assets/logo.webp';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import './Navbar.css';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const location = useLocation(); // Get current location
+  
+  // Helper function to check if the current path matches a given route
+  const isActive = (path) => {
+    if (path === '/' && location.pathname === '/') return true;
+    if (path !== '/' && location.pathname.startsWith(path)) return true;
+    return false;
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -27,6 +36,11 @@ function Navbar() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  // Close menu when location changes
+  useEffect(() => {
+    closeMenu();
+  }, [location]);
 
   const containerVariants = {
     open: {
@@ -69,6 +83,7 @@ function Navbar() {
 
   return (
     <div className="navbar">
+      <div className='navbar-container'>
       <div className="logo-container">
         <img src={logo} alt="Logo" className="logo" />
       </div>
@@ -96,22 +111,23 @@ function Navbar() {
           variants={containerVariants}
         >
           <motion.div variants={itemVariants}>
-            <Link to="/" className="navbar-link" onClick={closeMenu}>Sākumplapa</Link>
+            <Link to="/" className={`navbar-link ${isActive('/') ? 'active' : ''}`} onClick={closeMenu}>Sākumplapa</Link>
           </motion.div>
           <motion.div variants={itemVariants}>
-            <Link to="/par-mums" className="navbar-link" onClick={closeMenu}>Par mums</Link>
+            <Link to="/par-mums" className={`navbar-link ${isActive('/par-mums') ? 'active' : ''}`} onClick={closeMenu}>Par mums</Link>
           </motion.div>
           <motion.div variants={itemVariants}>
-            <Link to="/Kontakti" className="navbar-link" onClick={closeMenu}>Kontakti</Link>
+            <Link to="/Kontakti" className={`navbar-link ${isActive('/Kontakti') ? 'active' : ''}`} onClick={closeMenu}>Kontakti</Link>
           </motion.div>
         </motion.div>
       ) : (
         <div className="navbar-links">
-          <Link to="/" className="navbar-link">Sākumplapa</Link>
-          <Link to="/par-mums" className="navbar-link">Par mums</Link>
-          <Link to="/Kontakti" className="navbar-link">Kontakti</Link>
+          <Link to="/" className={`navbar-link ${isActive('/') ? 'active' : ''}`}>Sākumplapa</Link>
+          <Link to="/par-mums" className={`navbar-link ${isActive('/par-mums') ? 'active' : ''}`}>Par mums</Link>
+          <Link to="/Kontakti" className={`navbar-link ${isActive('/Kontakti') ? 'active' : ''}`}>Kontakti</Link>
         </div>
       )}
+      </div>
     </div>
   );
 }
