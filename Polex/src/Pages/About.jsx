@@ -18,7 +18,7 @@ function About() {
         <h1>Ko mēs piedāvājam?</h1>
         <ul>
           <li>Siltināšanu ar slēgto un atvērto poliuretāna šūnu putām</li>
-          <li>Primātmāju, angāru, noliktavu un citu ēku siltināšanu</li>
+          <li>Privātmāju, angāru, noliktavu un citu ēku siltināšanu</li>
           <li>Konsultāciju un atsaucību klientu jautājumiem</li>
         </ul>
       </div>
@@ -29,7 +29,7 @@ function About() {
         </div>
         <div className='about-name'>
           <h2>Uzņēmuma nosaukums</h2>
-          <p>SIA Polex</p>
+          <p>"SIA Polex"</p>
         </div>
         <div className='about-reg'>
           <h2>Reģistrācijas numurs</h2>
