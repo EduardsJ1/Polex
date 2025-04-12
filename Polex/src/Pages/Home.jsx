@@ -1,6 +1,4 @@
 import React from 'react';
-import { ReactComponent as SoundMuteIcon } from '../assets/icons/sound_figma_test.svg';
-import { ReactComponent as Icon } from '../assets/icons/Sound_mute.svg';
 import { ReactComponent as SoundIcon } from '../components/icons/soundIcon.jsx';
 import { ReactComponent as DropletIcon } from '../components/icons/dropletIcon.jsx';
 import { ReactComponent as HourglassIcon } from '../components/icons/hourglassIcon.jsx';
@@ -10,9 +8,7 @@ import { ReactComponent as StickyIcon } from '../components/icons/stickyIcon.jsx
 import HeatInsulation from './home_components/HeatInsulation.jsx';
 import Service from './home_components/Service.jsx';
 import ContactForm  from './Contact_form.jsx';
-import Footer from '../components/Footer.jsx';
 function Home() {
-    const viewBox = "-2 -2 24 24";
 
   return (
     <>
@@ -23,7 +19,6 @@ function Home() {
         </div>
         <div className="home-text-container">
             <h2>Efektīva siltumizolācija jūsu mājoklim un biznesam - samaziniet enerģijas patēriņu un izmaksas!</h2>
-            <h3>SIA POLEX piedāvā inovatīvus un augstas kvalitātes poliuretāna putu siltināšanas risinājumus, kas nodrošina ilgtspējīgu un efektīvu enerģijas ietaupījumu, piemērotus gan komerciāliem, gan privātiem objektiem visā Latvijā</h3>
         </div>
         <div className='home-information-container'>
             <h2>Kapēc izvēlēties poliuretāna putas?</h2>
@@ -95,7 +90,6 @@ function Home() {
             <ContactForm/>
         </div>
     </div>
-    <Footer/>
     </>
   );
 }

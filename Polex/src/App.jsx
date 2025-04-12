@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import './App.css'
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -18,6 +19,7 @@ function App() {
             <Route path="/kontakti" element={<Suspense fallback={<div>Loading...</div>}><Contact /></Suspense>} />
           </Routes>
       </div>
+      <Footer />
     </Router>
   )
 }
