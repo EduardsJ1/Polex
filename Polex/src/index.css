@@ -95,7 +95,7 @@ h3{
   flex-grow: 0;  
 }
 .home-information-container .icon-main-container  .icon-container .icon-text{
-  height: 100%;
+  height: 110px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -131,7 +131,7 @@ h3{
   text-align: right;
 }
 
-@media (min-width: 975px){
+@media (min-width: 1015px){
   .icon-main-container{
     display: flex;
     flex-direction: row;
@@ -390,15 +390,18 @@ h3{
 }
 /* main icon mobile fix */
 @media (max-width: 580px){
+  .icon-text{
+    height: 80px!important;
+  }
   .icon-text h2{
     font-size: 1.4rem;
   }
   .icon-text p{
     font-size: 14px !important;
   }
-  .icon-container .icon{
-    width: 80px;
-    height: 80px;
+  .icon{
+    width: 80px !important;
+    height: 80px !important;
   }
   .icon-container .icon svg{
     width: 70px;
