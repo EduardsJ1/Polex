@@ -1,5 +1,5 @@
 import React from 'react';
-import videoTest from '../../assets/videoTest.mp4';
+import videoTest from '../../assets/video.mp4';
 function HeatInsulation(){
     return (
         <div className='heat-main-container'>
