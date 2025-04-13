@@ -4,6 +4,8 @@ import './Contact.css';
 function Contact() {
   return (
     <>
+    <title>Polex - Kontakti</title>
+    <meta name="description" content="Sazinies ar SIA Polex profesionālu siltināšanas pakalpojumu sniedzēju, lai uzzinātu vairāk par poliuretāna putu siltināšanu un mūsu pakalpojumiem." />
     <div className="contact-page">
       <h1>Droši sazinies ar mums!</h1>
       <div className="contact-page-container">

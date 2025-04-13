@@ -2,6 +2,9 @@ import React from 'react';
 import './About.css';
 function About() {
   return (
+    <>
+    <title>Polex - Par mums</title>
+    <meta name="description" content="SIA Polex ir Latvijas uzņēmums, kas piedāva profesionālus siltināšanas pakalpojumus. Ilgtspējīgi risinājumi mājām un uzņēmumiem visā Latvijā" />
     <div className='about-page-main'>
       <div className='about-us-container'>
         <h1>Par mums</h1>
@@ -37,6 +40,7 @@ function About() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
