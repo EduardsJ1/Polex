@@ -21,7 +21,7 @@
     padding: 20px;
     max-width: 1200px;
     margin: auto;
-    font-family: 'Outfit', sans-serif;
+    font-family: sans-serif;
     position: relative;
   }
   .hamburger-container {
@@ -47,7 +47,7 @@
     font-size: 1.2rem;
     text-decoration: none;
     color: var(--secondary-color);
-    font-family: 'Outfit', sans-serif;
+    font-family: sans-serif;
     position: relative;
     padding: 8px 0;
     transition: color 0.3s ease;
