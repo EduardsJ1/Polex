@@ -17,7 +17,7 @@ function Contact() {
             </div>
             <div className='email-container'>
                 <h3>E-Pastu:</h3>
-                <p>polex@inbox.lv</p>
+                <p>info@polex.lv</p>
             </div>
         </div>
         <div className="email-form-container">

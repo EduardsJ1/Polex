@@ -10,7 +10,6 @@ function Footer(){
                     </div>
                     <p>© 2025 Polex</p>
                 </div>
-                {/* <div className='footer-info'> */}
                     <div className='footer-links'>
                         <h2>Navigācija</h2>
                         <Link to="/" className="navbar-link">Sākumplapa</Link>
@@ -27,7 +26,7 @@ function Footer(){
 
                             <div>
                                 <p>E-pasts:</p>
-                                <p>polex@inbox.lv</p>
+                                <p>info@polex.lv</p>
                             </div>
 
                             <div>
@@ -36,7 +35,6 @@ function Footer(){
                             </div>
                         </div>
                     </div>
-                {/* </div> */}
             </div>
         </footer>
     )

@@ -9,7 +9,7 @@ function HeatInsulation(){
                     <h2>Poliuretāna putas nodrošina augstu temperatūras izolāciju,
                         kas palīdz saglabāt ēku siltu ziemā un vēsu vasarā</h2>
                     <h4 className='fact-text'>*Poliuretāna putu izcilās temperatūras izolācijas
-                        īpašības novērtēja pat NASA, kur izmantojot tās kosmosa kuģu izolācijā*</h4>
+                        īpašības novērtēja pat NASA, kur izmantojot tās kosmosa kuģu izolācijā <a href='https://dura-foam.com/resources/foam-roofing/nasa-shuttle-fuel-tank/'>[1]</a>*</h4>
                 </div>
                 <div className='video-container'>
                     <video className="video" autoPlay loop muted playsInline>
