@@ -3,13 +3,13 @@ import videoTest from '../../assets/video.mp4';
 function HeatInsulation(){
     return (
         <div className='heat-main-container'>
-            <h1>Efektīva siltumizolācija</h1>
+            <h2>Efektīva siltumizolācija</h2>
             <div className='heat-container'>
                 <div className="heat-text-container">
-                    <h2>Poliuretāna putas nodrošina augstu temperatūras izolāciju,
-                        kas palīdz saglabāt ēku siltu ziemā un vēsu vasarā</h2>
-                    <h4 className='fact-text'>*Poliuretāna putu izcilās temperatūras izolācijas
-                        īpašības novērtēja pat NASA, kur izmantojot tās kosmosa kuģu izolācijā <a href='https://dura-foam.com/resources/foam-roofing/nasa-shuttle-fuel-tank/'>[1]</a>*</h4>
+                    <p>Poliuretāna putas nodrošina augstu temperatūras izolāciju,
+                        kas palīdz saglabāt ēku siltu ziemā un vēsu vasarā</p>
+                    <p className='fact-text'>Poliuretāna putu izcilās temperatūras izolācijas
+                        īpašības novērtēja pat NASA, kur izmantojot tās kosmosa kuģu izolācijā <a href='https://dura-foam.com/resources/foam-roofing/nasa-shuttle-fuel-tank/'>[1]</a>.</p>
                 </div>
                 <div className='video-container'>
                     <video className="video" autoPlay loop muted playsInline>

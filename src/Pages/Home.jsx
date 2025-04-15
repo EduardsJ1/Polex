@@ -12,12 +12,12 @@ function Home() {
 
   return (
     <>
-    <title>Polex</title>
+    <title>Polex - Māju siltināšana visā Latvijā ar poliuretāna putām</title>
     <meta name="description" content="SIA Polex piedāvā profesionālu mājas siltināšanu visā Latvijā ar poliuretāna putām, to skaitā jumtiem, bēniņiem, pagrabiem un citām vajadzībām." />
     <div className="page">
         <div className="home-title-container">
-            <h1>SIA POLEX</h1>
-            <h3>Profesionāls poliuretāna putu siltināšanas risinājums</h3>
+            <h1>Efektīvi mājas siltumizolācijas pakalpojumi ar poliuretāna putām</h1>
+            <p>POLEX - Profesionāls poliuretāna putu siltināšanas risinājums</p>
         </div>
         <div className="home-text-container">
             <h2>Efektīva siltumizolācija jūsu mājoklim un biznesam - samaziniet enerģijas patēriņu un izmaksas!</h2>
