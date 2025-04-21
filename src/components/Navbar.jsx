@@ -7,9 +7,8 @@ import './Navbar.css';
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const location = useLocation(); // Get current location
+  const location = useLocation();
   
-  // Helper function to check if the current path matches a given route
   const isActive = (path) => {
     if (path === '/' && location.pathname === '/') return true;
     if (path !== '/' && location.pathname.startsWith(path)) return true;
@@ -37,7 +36,6 @@ function Navbar() {
     };
   }, []);
 
-  // Close menu when location changes
   useEffect(() => {
     closeMenu();
   }, [location]);
@@ -85,7 +83,15 @@ function Navbar() {
     <div className="navbar">
       <div className='navbar-container'>
       <div className="logo-container">
-        <img src={logo} alt="Logo" className="logo" />
+        <img 
+          src={logo}
+          width="140"
+          height="140" 
+          alt="Logo" 
+          className="logo"
+          loading="lazy"
+          fetchpriority="low"
+        />
       </div>
       <div className="hamburger-container" onClick={toggleMenu}>
         <svg

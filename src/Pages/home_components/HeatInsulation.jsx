@@ -12,7 +12,15 @@ function HeatInsulation(){
                         īpašības novērtēja pat NASA, kur izmantojot tās kosmosa kuģu izolācijā <a href='https://dura-foam.com/resources/foam-roofing/nasa-shuttle-fuel-tank/'>[1]</a>.</p>
                 </div>
                 <div className='video-container'>
-                    <video className="video" autoPlay loop muted playsInline>
+                    <video 
+                        className="video" 
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline
+                        loading="lazy"
+                        fetchpriority="low"
+                    >
                         <source src={videoTest} type="video/mp4" />
                     </video>
                 </div>

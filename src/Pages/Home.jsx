@@ -1,15 +1,36 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { ReactComponent as SoundIcon } from '../components/icons/soundIcon.jsx';
 import { ReactComponent as DropletIcon } from '../components/icons/dropletIcon.jsx';
 import { ReactComponent as HourglassIcon } from '../components/icons/hourglassIcon.jsx';
 import { ReactComponent as CompactIcon } from '../components/icons/compactIcon.jsx';
 import { ReactComponent as ShieldIcon } from '../components/icons/shieldIcon.jsx';
 import { ReactComponent as StickyIcon } from '../components/icons/stickyIcon.jsx';
-import HeatInsulation from './home_components/HeatInsulation.jsx';
-import Service from './home_components/Service.jsx';
-import ContactForm  from './Contact_form.jsx';
+import { useInView } from "react-intersection-observer";
+import Loading from '../components/Loading.jsx';
+const HeatInsulation = lazy(() => import('./home_components/HeatInsulation.jsx'));
+const Service = lazy(() => import('./home_components/Service.jsx'));
+const FAQService = lazy(() => import('./home_components/FAQService.jsx'));
+const ContactForm = lazy(() => import('./Contact_form.jsx'));
 function Home() {
+    const [heatInsulationRef, heatInsulationInView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+      });
+    
+      const [serviceRef, serviceInView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+      });
 
+        const [faqRef, faqInView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+    
+      const [contactRef, contactInView] = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+      });
   return (
     <>
     <title>Polex - Māju siltināšana visā Latvijā ar poliuretāna putām</title>
@@ -80,16 +101,39 @@ function Home() {
             </div>
         </div>
     </div>
-    <HeatInsulation />
+    <div ref={heatInsulationRef} style={{ minHeight: '200px'}}>
+      {heatInsulationInView && (
+        <Suspense fallback={<Loading height="100vh" width="100%" />}>
+          <HeatInsulation />
+        </Suspense>
+      )}
+    </div>
     <div className="section-divider">
         <div className='section-background'>
-            <Service/>
+            <div ref={serviceRef} style={{ minHeight: '200px'}}>
+                {serviceInView && (
+                <Suspense fallback={<Loading height="100vh" width="100%" />}>
+                    <Service />
+                </Suspense>
+                )}
+            </div>
+            <div ref={faqRef} style={{ minHeight: '200px'}}>
+                {faqInView && (
+                <Suspense fallback={<Loading height="100vh" width="100%" />}>
+                    <FAQService />
+                </Suspense>
+                )}
+            </div>
         </div>
     </div>
-    <div className='contact-main-container'>
+    <div className='contact-main-container' ref={contactRef}>
         <h2>Sazinaties ar mums!</h2>
         <div className='contact-form-container'>
-            <ContactForm/>
+            {contactInView && (
+            <Suspense fallback={<Loading height="100vh" width="100%" />}>
+                <ContactForm />
+            </Suspense>
+            )}
         </div>
     </div>
     </>

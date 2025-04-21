@@ -6,13 +6,16 @@ import { ReactComponent as BasementIcon } from '../../components/icons/basementI
 import { ReactComponent as OuterWallIcon } from '../../components/icons/outerwallIcon.jsx';
 import { ReactComponent as InnerWallIcon } from '../../components/icons/innerwallIcon.jsx';
 import { ReactComponent as OtherIcon } from '../../components/icons/otherIcon.jsx';
-import Gallery from '../../components/Gallery.jsx';
+import React, { lazy, Suspense } from 'react';
+const Gallery = lazy(() => import('../../components/Gallery.jsx'));
 function Service(){
     return(
-        <div className="service-section">
+    <div className="service-section">
         <h2>Pakalpojumi</h2>
         <p>POLEX piedāvā profesionālus mājas siltināšanas pakalpojumus, nodrošinot efektīvu siltumizolāciju ar poliuretāna putām</p>
-        <Gallery/>
+        <Suspense fallback={<div className="loading">Ielādē galeriju...</div>}>
+            <Gallery />
+        </Suspense>
         <div className='service-icon-container'>
             <div className="title"><h2>Pakalpojumi var iekļaut</h2></div>
             <div className='service-information'>
@@ -40,7 +43,7 @@ function Service(){
                     <div className='service-icon'><FoundationIcon/></div>
                     <div className='service-title'><h3>Pamatu siltināšana</h3></div>
                     <div className='service-description'>
-                        <p>Pamatus izolējam ar slēgto šūnu poliuretāna putām, kuras izceļas ar augstu mehānisko izturību un mitruma necaurlaidību. 
+                        <p>Pamatus izolējam ar slēgto šūnu poliuretāna putām, kuras izceļas ar Nameaugstu mehānisko izturību un mitruma necaurlaidību. 
                             Šīs putas nodrošina efektīvu siltuma saglabāšanu un ilgtermiņa aizsardzību pret mitruma ietekmi un ēkas konstrukcijām.
                         </p>
                     </div>
@@ -98,60 +101,8 @@ function Service(){
 
             </div>
         </div>
-        <div className='FAQ-service-section'>
-            <h2>Visbiežākie uzdotie jautājumi</h2>
-            <div className='FAQ-service-container'>
-                <div className='FAQ-service-question'>
-                    <h3>Kapēc izvēlēties poliuretānas putas mājas siltināšanai?</h3>
-                </div>
-                <div className='FAQ-service-answer'>
-                    <p>Salīdzinājumā ar tradicionālajiem materiāliem, piemēram, akmens vati, poliuretāna putas nodrošina augstāku siltumizolācijas koeficientu - tas nozīmē, ka tās izolē labāk ar plānāku kārtu.
-                    Putas veido vienmērīgu, bezšuvju pārklājumu, kas pilnībā nosedz spraugas un plaisas, samazinot siltuma zudumus līdz minimumam. Turklāt, atšķirībā no akmens vates, putas neuzsūc mitrumu, nerada nosēdumus un ilgtermiņā nezaudē savu efektivitāti.
-                    </p>
-                </div>
-            </div>
-            <div className='FAQ-service-container'>
-                <div className='FAQ-service-question'>
-                    <h3>Cik ilgi kalpo poliuretāna putas siltinājums?</h3>
-                </div>
-                <div className='FAQ-service-answer'>
-                    <p>Uzklāts poliuretāna putu siltinājums var kalpot 30 vai vairāk gadus bez nepieciešamības to mainīt vai atjaunot.</p>
-                </div>
-            </div>
-            <div className='FAQ-service-container'>
-                <div className='FAQ-service-question'>
-                    <h3>Vai poliuretāna putas ir drošas veselībai?</h3>
-                </div>
-                <div className='FAQ-service-answer'>
-                    <p>Jā, pēc sacietēšanas poliuretāna putas ir pilnībā drošas - tās neveido putekļus, neizdala kaitīgas vielas un ir piemērotas arī iekštelpu siltināšanai.</p>
-                </div>
-            </div>
-            <div className='FAQ-service-container'>
-                <div className='FAQ-service-question'>
-                    <h3>Kādos objektos var izmantot poliuretāna siltinājumu?</h3>
-                </div>
-                <div className='FAQ-service-answer'>
-                    <p>Poliuretāna putas ir piemērotas jumtiem, sienām, grīdām, bēniņiem, kā arī rūpnieciskām un citām jūsu vajadzībām.</p>
-                </div>
-            </div>
-            <div className='FAQ-service-container'>
-                <div className='FAQ-service-question'>
-                    <h3>Cik ilgi notiek poliuretāna putas uzklāšanas process?</h3>
-                </div>
-                <div className='FAQ-service-answer'>
-                    <p>Parasti nelielām privātmājām siltināšanas uzklāšana var aizņemt 1-2 dienas, tas ir atkarīgs no objekta lieluma un piekļuves iespējām.</p>
-                </div>
-            </div>
-            <div className='FAQ-service-container'>
-                <div className='FAQ-service-question'>
-                    <h3>Vai poliuretāna putas var izmantot koka konstrukcijās?</h3>
-                </div>
-                <div className='FAQ-service-answer'>
-                    <p>Jā, poliuretāna putas ir lieliski piemērotas koka mājas siltināšanai. Tās pielīp pie virsmans un veido gaisa necaurlaidīgu barjeru, kas palīdz novērst mitruma kondensāciju un pagarina konstrukcijas kalpošanas laiku.</p>
-                </div>
-            </div>
-        </div>
-        </div>
+        
+    </div>
     );
 }
 
