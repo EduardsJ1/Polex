@@ -330,7 +330,7 @@ h3{
   position: relative;
   z-index: 2;
   background-color: var(--primary-color);
-  min-height: 100vh;
+  min-height: 500px;
   padding-bottom: 5rem;
 }
 
