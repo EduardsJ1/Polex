@@ -19,25 +19,22 @@ const Gallery = () => {
   const [isMobile, setIsMobile] = useState(false);
   const intervalRef = useRef(null);
 
-
+  // Check if device is mobile
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-
     checkIfMobile();
 
-
     window.addEventListener('resize', checkIfMobile);
-
 
     return () => {
       window.removeEventListener('resize', checkIfMobile);
     };
   }, []);
 
-
+  // Auto-rotate image gallery
   useEffect(() => {
     const startInterval = () => {
       intervalRef.current = setInterval(() => {
@@ -64,12 +61,10 @@ const Gallery = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
 
-
   const getVisibleImages = () => {
     const totalImages = images.length;
     const visibleImages = [];
     
-
     const range = isMobile ? 1 : 2;
     
     for (let i = -range; i <= range; i++) {
@@ -98,11 +93,14 @@ const Gallery = () => {
       onMouseLeave={() => setIsPaused(false)}
     >
       <button className="gallery-button prev" onClick={handlePrev}>❮</button>
-      <div className="gallery-images-row">
-        {visibleImages.map((image, idx) => (
+      <div className="gallery-track">
+        {visibleImages.map((image) => (
           <div 
             key={`image-${image.index}`} 
             className={`gallery-image-wrapper ${image.position === 0 ? 'center' : ''}`}
+            style={{
+              transform: `translateX(${image.position * (isMobile ? 150 : 200)}px)`
+            }}
           >
             <img 
               src={image.src} 

@@ -1,6 +1,6 @@
-function Loading({ width, height }) {
+function Loading({ width, height, backgroundColor }) {
     return (
-        <div className="loading" style={{ width, height, backgroundColor: "#1A1A1A" }}>
+        <div className="loading" style={{ width, height, backgroundColor }}>
             {/* <p>Loading_test_test</p> */}
         </div>
     );

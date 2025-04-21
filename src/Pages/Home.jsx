@@ -103,7 +103,7 @@ function Home() {
     </div>
     <div ref={heatInsulationRef} style={{ minHeight: '200px'}}>
       {heatInsulationInView && (
-        <Suspense fallback={<Loading height="100vh" width="100%" />}>
+        <Suspense fallback={<Loading height="100%" width="100%" backgroundColor="#1A1A1A" />}>
           <HeatInsulation />
         </Suspense>
       )}
@@ -112,14 +112,14 @@ function Home() {
         <div className='section-background'>
             <div ref={serviceRef} style={{ minHeight: '200px'}}>
                 {serviceInView && (
-                <Suspense fallback={<Loading height="100vh" width="100%" />}>
+                <Suspense fallback={<Loading height="100%" width="100%" backgroundColor="#FFFFFF"/>}>
                     <Service />
                 </Suspense>
                 )}
             </div>
             <div ref={faqRef} style={{ minHeight: '200px'}}>
                 {faqInView && (
-                <Suspense fallback={<Loading height="100vh" width="100%" />}>
+                <Suspense fallback={<Loading height="100%" width="100%" backgroundColor="#FFFFFF"/>}>
                     <FAQService />
                 </Suspense>
                 )}
@@ -130,7 +130,7 @@ function Home() {
         <h2>Sazinaties ar mums!</h2>
         <div className='contact-form-container'>
             {contactInView && (
-            <Suspense fallback={<Loading height="100vh" width="100%" />}>
+            <Suspense fallback={<Loading height="100vh" width="100%" backgroundColor="#1A1A1A"/>}>
                 <ContactForm />
             </Suspense>
             )}

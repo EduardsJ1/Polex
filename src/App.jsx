@@ -15,8 +15,8 @@ function App() {
       <div className="content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/par-mums" element={<Suspense fallback={<Loading height="100vh" width="100%" />}><About /></Suspense>} />
-            <Route path="/kontakti" element={<Suspense fallback={<Loading height="100vh" width="100%" />}><Contact /></Suspense>} />
+            <Route path="/par-mums" element={<Suspense fallback={<Loading height="100vh" width="100%" backgroundColor="#1A1A1A"/>}><About /></Suspense>} />
+            <Route path="/kontakti" element={<Suspense fallback={<Loading height="100vh" width="100%" backgroundColor="#1A1A1A"/>}><Contact /></Suspense>} />
           </Routes>
       </div>
       <Footer />
