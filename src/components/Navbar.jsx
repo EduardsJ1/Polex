@@ -123,14 +123,14 @@ function Navbar() {
             <Link to="/par-mums" className={`navbar-link ${isActive('/par-mums') ? 'active' : ''}`} onClick={closeMenu}>Par mums</Link>
           </motion.div>
           <motion.div variants={itemVariants}>
-            <Link to="/Kontakti" className={`navbar-link ${isActive('/Kontakti') ? 'active' : ''}`} onClick={closeMenu}>Kontakti</Link>
+            <Link to="/kontakti" className={`navbar-link ${isActive('/Kontakti') ? 'active' : ''}`} onClick={closeMenu}>Kontakti</Link>
           </motion.div>
         </motion.div>
       ) : (
         <div className="navbar-links">
           <Link to="/" className={`navbar-link ${isActive('/') ? 'active' : ''}`}>Sākumplapa</Link>
           <Link to="/par-mums" className={`navbar-link ${isActive('/par-mums') ? 'active' : ''}`}>Par mums</Link>
-          <Link to="/Kontakti" className={`navbar-link ${isActive('/Kontakti') ? 'active' : ''}`}>Kontakti</Link>
+          <Link to="/kontakti" className={`navbar-link ${isActive('/Kontakti') ? 'active' : ''}`}>Kontakti</Link>
         </div>
       )}
       </div>
