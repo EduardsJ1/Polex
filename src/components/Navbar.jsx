@@ -90,7 +90,7 @@ function Navbar() {
           alt="Logo" 
           className="logo"
           loading="lazy"
-          fetchpriority="low"
+          fetchPriority="low"
         />
       </div>
       <div className="hamburger-container" onClick={toggleMenu}>

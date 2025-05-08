@@ -19,7 +19,7 @@ function HeatInsulation(){
                         muted 
                         playsInline
                         loading="lazy"
-                        fetchpriority="low"
+                        fetchPriority="low"
                     >
                         <source src={videoTest} type="video/mp4" />
                     </video>
