@@ -5,6 +5,7 @@ import test2 from '../assets/gallery-images/test2.webp';
 import test3 from '../assets/gallery-images/test3.webp';
 import test4 from '../assets/gallery-images/test4.webp';
 import test5 from '../assets/gallery-images/test5.webp';
+// Load images
 const images = [
     test1,
     test2,
@@ -19,7 +20,7 @@ const Gallery = () => {
   const [isMobile, setIsMobile] = useState(false);
   const intervalRef = useRef(null);
 
-  // Check if device is mobile
+  // check mobile resolution
   useEffect(() => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -34,7 +35,7 @@ const Gallery = () => {
     };
   }, []);
 
-  // Auto-rotate image gallery
+  // rotate images (3 seconds)
   useEffect(() => {
     const startInterval = () => {
       intervalRef.current = setInterval(() => {
@@ -53,6 +54,7 @@ const Gallery = () => {
     };
   }, [isPaused]);
 
+  // button functions
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
   };
@@ -70,7 +72,7 @@ const Gallery = () => {
     for (let i = -range; i <= range; i++) {
       let indexToShow = currentIndex + i;
       
-      // Handle wrapping around the array
+      
       if (indexToShow < 0) indexToShow = totalImages + indexToShow;
       if (indexToShow >= totalImages) indexToShow = indexToShow - totalImages;
       
@@ -99,7 +101,7 @@ const Gallery = () => {
             key={`image-${image.index}`} 
             className={`gallery-image-wrapper ${image.position === 0 ? 'center' : ''}`}
             style={{
-              transform: `translateX(${image.position * (isMobile ? 150 : 200)}px)`
+              transform: `translateX(${image.position * (isMobile ? 170 : 230)}px)`
             }}
           >
             <img 

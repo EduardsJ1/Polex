@@ -14,22 +14,26 @@ const ContactForm = lazy(() => import('./Contact_form.jsx'));
 function Home() {
     const [heatInsulationRef, heatInsulationInView] = useInView({
         triggerOnce: true,
-        threshold: 0.1,
+        threshold: 0,
+        rootMargin: '0px 0px 50% 0px',
       });
     
       const [serviceRef, serviceInView] = useInView({
         triggerOnce: true,
-        threshold: 0.1,
+        threshold: 0,
+        rootMargin: '0px 0px 50% 0px',
       });
 
         const [faqRef, faqInView] = useInView({
         triggerOnce: true,
-        threshold: 0.1,
+        threshold: 0,
+        rootMargin: '0px 0px 50% 0px',
     });
     
       const [contactRef, contactInView] = useInView({
         triggerOnce: true,
-        threshold: 0.1,
+        threshold: 0,
+        rootMargin: '0px 0px 50% 0px',
       });
   return (
     <>
@@ -101,7 +105,7 @@ function Home() {
             </div>
         </div>
     </div>
-    <div ref={heatInsulationRef} style={{ minHeight: '200px'}}>
+    <div ref={heatInsulationRef} className='heat-ref'>
       {heatInsulationInView && (
         <Suspense fallback={<Loading height="100%" width="100%" backgroundColor="#1A1A1A" />}>
           <HeatInsulation />
@@ -110,14 +114,14 @@ function Home() {
     </div>
     <div className="section-divider">
         <div className='section-background'>
-            <div ref={serviceRef} style={{ minHeight: '200px'}}>
+            <div ref={serviceRef} className='service-ref'>
                 {serviceInView && (
                 <Suspense fallback={<Loading height="100%" width="100%" backgroundColor="#FFFFFF"/>}>
                     <Service />
                 </Suspense>
                 )}
             </div>
-            <div ref={faqRef} style={{ minHeight: '200px'}}>
+            <div ref={faqRef} className='faq-ref'>
                 {faqInView && (
                 <Suspense fallback={<Loading height="100%" width="100%" backgroundColor="#FFFFFF"/>}>
                     <FAQService />

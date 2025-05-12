@@ -7,15 +7,18 @@ import { ReactComponent as OuterWallIcon } from '../../components/icons/outerwal
 import { ReactComponent as InnerWallIcon } from '../../components/icons/innerwallIcon.jsx';
 import { ReactComponent as OtherIcon } from '../../components/icons/otherIcon.jsx';
 import React, { lazy, Suspense } from 'react';
+import Loading from '../../components/Loading.jsx';
 const Gallery = lazy(() => import('../../components/Gallery.jsx'));
 function Service(){
     return(
     <div className="service-section">
         <h2>Pakalpojumi</h2>
         <p>POLEX piedāvā profesionālus mājas siltināšanas pakalpojumus, nodrošinot efektīvu siltumizolāciju ar poliuretāna putām</p>
-        <Suspense fallback={<div className="loading">Ielādē galeriju...</div>}>
-            <Gallery />
-        </Suspense>
+        <div className='gallery-container-main'>
+            <Suspense fallback={<Loading height="100%" width="100%" backgroundColor="#FFFFFF"/>}>
+                <Gallery />
+            </Suspense>
+        </div>
         <div className='service-icon-container'>
             <div className="title"><h2>Pakalpojumi var iekļaut</h2></div>
             <div className='service-information'>

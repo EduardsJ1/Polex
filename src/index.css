@@ -213,6 +213,10 @@ h3{
   margin: auto;
   padding: 0 20px;
 }
+.heat-main-container h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 .heat-container{
   display: flex;
   flex-wrap: wrap-reverse;
@@ -299,12 +303,19 @@ h3{
   padding: 1rem;
   border-radius: 15px;
   overflow: hidden;
+  position: relative;
+  aspect-ratio: 16 / 9; 
+  background-color: #000;
 }
 
 .heat-container .video-container video{
   width: 100%;
   height: 100%;
   border-radius: 15px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* New section devider CSS */
@@ -353,7 +364,16 @@ h3{
   max-width: 1200px;
   margin: auto;
 }
+/* reserving space for gallery */
+.gallery-container-main{
+  height: 380px;
+}
 
+@media (max-width: 768px) {
+  .gallery-container-main {
+    height: 280px;
+  }
+}
 
 .service-section > p {
   font-size: 1.1rem;
@@ -456,33 +476,24 @@ h3{
   color: #333;
   text-align: center;
 }
-
+/* reserve space for 2.section */
+.service-ref{
+  height: 1970px;
+}
 @media (max-width: 1220px) {
   .service-information{
     grid-template-columns: repeat(2, 1fr);
   }
+  .service-ref{
+    height: 3130px;
+  }
 }
 
-@media (max-width: 550px){
-  .service-information{
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .service-icon-container .title h2 {
-    font-size: 1.6rem;
-  }
-  .footer-content h2{
-    font-size: 16px;
-    margin: 10px;
-  }
-  .footer-content{
-    font-size: 10px;
-  }
-  .footer-logo-info{
-    width: 100px;
-  }
-}
 /* main icon mobile fix */
 @media (max-width: 580px){
+  .service-ref{
+    height: 3000px;
+  }
   .icon-text{
     height: 80px!important;
   }
@@ -532,6 +543,46 @@ h3{
   
   .service-information .service-card .service-description p {
     font-size: 0.9rem;
+  }
+}
+@media (max-width: 550px){
+  .service-ref{
+    height: 4200px;
+  }
+  .service-information{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .service-icon-container .title h2 {
+    font-size: 1.6rem;
+  }
+  .footer-content h2{
+    font-size: 16px;
+    margin: 10px;
+  }
+  .footer-content{
+    font-size: 10px;
+  }
+  .footer-logo-info{
+    width: 100px;
+  }
+}
+
+/* for service ref (cards expanding in space) */
+@media (max-width: 450px){
+  .service-ref{
+    height: 4680px;
+  }
+}
+
+@media (max-width: 375px){
+  .service-ref{
+    height: 4770px;
+  }
+}
+
+@media (max-width: 335px){
+  .service-ref{
+    height: 5200px;
   }
 }
 
@@ -603,7 +654,6 @@ footer{
 
 /* FAQ service sekcija */
 .FAQ-service-section {
-  margin-top: 4rem;
   padding: 2rem 0;
   color: var(--secondary-color);
 }
@@ -668,8 +718,20 @@ footer{
   margin: 0;
   text-align: left;
 }
-
+.faq-ref{
+  margin-top: 4rem;
+  padding: 0 20px;
+  height: 1350px;
+}
+@media (max-width: 1220px) {
+  .faq-ref{
+    height: 1420px;
+  }
+}
 @media (max-width: 768px) {
+  .faq-ref{
+    height: 1350px;
+  }
   .FAQ-service-container {
     padding: 1.2rem;
   }
@@ -682,8 +744,15 @@ footer{
     font-size: 0.95rem;
   }
 }
-
+@media (max-width: 600px) {
+  .faq-ref{
+    height: 1440px;
+  }
+}
 @media (max-width: 550px) {
+  .faq-ref{
+    height: 1390px;
+  }
   .FAQ-service-section h2 {
     font-size: 1.6rem;
   }
@@ -700,3 +769,34 @@ footer{
     font-size: 0.9rem;
   }
 }
+@media (max-width: 495px) {
+  .faq-ref{
+    height: 1550px;
+  }
+}
+
+@media (max-width: 420px) {
+  .faq-ref{
+    height: 1750px;
+  }
+}
+@media (max-width: 350px) {
+  .faq-ref{
+    height: 1850px;
+  }
+}
+
+/* Reference styles- reserving space */
+/* 1.section */
+.heat-ref{
+  margin-top: 40px;
+  min-height: 500px;
+}
+
+@media (max-width: 755px) {
+  .heat-ref {
+    height: 700px;
+  }
+}
+
+
