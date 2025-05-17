@@ -5,6 +5,18 @@ function About() {
     <>
     <title>Polex - Par mums</title>
     <meta name="description" content="SIA Polex ir Latvijas uzņēmums, kas piedāva profesionālus siltināšanas pakalpojumus. Ilgtspējīgi risinājumi mājām un uzņēmumiem visā Latvijā" />
+    
+    <meta property="og:url" content="https://polex.lv/about" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Polex - Par mums" />
+    <meta property="og:description" content="SIA Polex ir Latvijas uzņēmums, kas piedāva profesionālus siltināšanas pakalpojumus. Ilgtspējīgi risinājumi mājām un uzņēmumiem visā Latvijā" />
+    <meta property="og:image" content="https://polex.lv/images/logo.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Polex - Par mums" />
+    <meta name="twitter:description" content="SIA Polex ir Latvijas uzņēmums, kas piedāva profesionālus siltināšanas pakalpojumus. Ilgtspējīgi risinājumi mājām un uzņēmumiem visā Latvijā" />
+    <meta name="twitter:image" content="https://polex.lv/images/logo.webp" />
+    
     <div className='about-page-main'>
       <div className='about-us-container'>
         <h1>Par mums</h1>

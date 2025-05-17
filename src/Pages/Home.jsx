@@ -35,6 +35,18 @@ function Home() {
     <>
     <title>Polex - Māju siltināšana visā Latvijā ar poliuretāna putām</title>
     <meta name="description" content="SIA Polex piedāvā profesionālu mājas siltināšanu visā Latvijā ar poliuretāna putām, to skaitā jumtiem, bēniņiem, pagrabiem un citām vajadzībām." />
+
+    <meta property="og:url" content="https://polex.lv" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Polex - Māju siltināšana visā Latvijā ar poliuretāna putām" />
+    <meta property="og:description" content="SIA Polex piedāvā profesionālu mājas siltināšanu visā Latvijā ar poliuretāna putām, to skaitā jumtiem, bēniņiem, pagrabiem un citām vajadzībām." />
+    <meta property="og:image" content="https://polex.lv/images/logo.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Polex - Māju siltināšana visā Latvijā ar poliuretāna putām" />
+    <meta name="twitter:description" content="SIA Polex piedāvā profesionālu mājas siltināšanu visā Latvijā ar poliuretāna putām, to skaitā jumtiem, bēniņiem, pagrabiem un citām vajadzībām." />
+    <meta name="twitter:image" content="https://polex.lv/images/logo.webp" />
+    
     <div className="page">
         <div className="home-title-container">
             <h1>Efektīvi mājas siltumizolācijas pakalpojumi ar poliuretāna putām</h1>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import logo from '../assets/logo.webp';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
@@ -84,7 +83,7 @@ function Navbar() {
       <div className='navbar-container'>
       <div className="logo-container">
         <img 
-          src={logo}
+          src="/images/logo.webp"
           width="140"
           height="140" 
           alt="Logo" 

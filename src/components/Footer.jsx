@@ -1,4 +1,3 @@
-import logo from '../assets/logo.webp';
 import { Link } from 'react-router-dom';
 function Footer(){
     return(
@@ -6,7 +5,7 @@ function Footer(){
             <div className="footer-content">
                 <div className="footer-logo-info">
                     <div className="footer-logo">
-                        <img src={logo} alt="logo" />
+                        <img src="/images/logo.webp" alt="logo" />
                     </div>
                     <p>© 2025 Polex</p>
                 </div>
