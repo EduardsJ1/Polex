@@ -13,6 +13,7 @@ const NotFound = () => {
         textAlign: 'center',
     }}>
         <title>404 - Lapa nav atrasta</title>
+        <meta name='robots' content='noindex' />
         <h1 style={{ fontSize: '5rem', marginBottom: '1rem', color: '#FFFFFF' }}>404</h1>
         <h2 style={{ marginBottom: '2rem' }}>Lapa nav atrasta</h2>
         <p style={{ marginBottom: '2rem', maxWidth: '600px' }}>

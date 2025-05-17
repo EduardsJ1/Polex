@@ -14,25 +14,21 @@ const ContactForm = lazy(() => import('./Contact_form.jsx'));
 function Home() {
     const [heatInsulationRef, heatInsulationInView] = useInView({
         triggerOnce: true,
-        threshold: 0,
         rootMargin: '0px 0px 50% 0px',
       });
     
       const [serviceRef, serviceInView] = useInView({
         triggerOnce: true,
-        threshold: 0,
         rootMargin: '0px 0px 50% 0px',
       });
 
         const [faqRef, faqInView] = useInView({
         triggerOnce: true,
-        threshold: 0,
         rootMargin: '0px 0px 50% 0px',
     });
     
       const [contactRef, contactInView] = useInView({
         triggerOnce: true,
-        threshold: 0,
         rootMargin: '0px 0px 50% 0px',
       });
   return (
